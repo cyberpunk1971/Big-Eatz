@@ -5,5 +5,15 @@ function getDataFromApi(searchTerm, callback) {
   const query = {
     key: API_KEY,
     q: `${searchTerm} in:name`,
+    count: 5,
+    
+
   }
+  $.getJSON(SEARCH_URL, query, callback);
+
 }
+getDataFromApi('steak');
+
+// function displayData(data) {
+//   const results =
+// }
