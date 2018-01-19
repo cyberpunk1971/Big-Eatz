@@ -3,16 +3,26 @@ const SEARCH_URL = "http://food2fork.com/api/search";
 
 function getDataFromApi(searchTerm, callback) {
   const query = {
-    key: API_KEY,
-    q: `${searchTerm} in:name`,
-    count: 5,
-    
+    url: SEARCH_URL,
+    data: {
+      q:`${searchTerm}in:name`,
+      crossDomain:true,
+      key: API_KEY
+    },
+    dataType: 'json',
+    type: 'GET',
+    success: callback,
 
-  }
-  $.getJSON(SEARCH_URL, query, callback);
+  };
+
+
+  $.ajax(query).done(function(data){console.log(data)});
 
 }
-getDataFromApi('steak');
+function displayData(data) {
+  const results = data.search.map((item, index) => renderResult(item));
+}
+getDataFromApi('steak', displayData);
 
 // function displayData(data) {
 //   const results =
