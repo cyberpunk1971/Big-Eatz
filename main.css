@@ -1,0 +1,4 @@
+fieldset, #js-label {
+  display: hidden;
+  border-style: none;
+}
