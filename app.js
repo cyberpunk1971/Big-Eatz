@@ -23,6 +23,20 @@ function getDataFromApi(searchTerm, callback) {
 }
 function displayData(data) {
   data.hits.forEach(item =>{
+  let html =  $(`<div class="card col-4">
+      <div class="card-image">
+        <img src="${item.recipe.image}" class="js-image">
+        <span class="card-title">${item.recipe.label}</span>
+      </div>
+      <div class="card-content">
+
+        <p>${item.recipe.ingredientLines}</p>
+      </div>
+      <div class="card-action">
+        <a href="#">This is a link</a>
+      </div>
+    </div>`);
+    $('#js-results').append(html);
     console.log(item.recipe.label);
     console.log(item.recipe.image);
     console.log(item.recipe.ingredientLines.join(","));
