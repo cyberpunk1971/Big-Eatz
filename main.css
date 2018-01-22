@@ -2,3 +2,13 @@ fieldset, #js-label {
   display: hidden;
   border-style: none;
 }
+
+header {
+  text-align: center;
+  font-size: 100px;
+}
+
+nav ul li {
+  list-style: none;
+  font-size: 25px;
+}
