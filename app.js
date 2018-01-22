@@ -2,11 +2,11 @@ const API_KEY = "8f4f8a684459af2852013466a60ed3ec";
 const SEARCH_URL = "https://api.edamam.com/search";
 const APP_ID = "b5c71b52";
 
-function getDataFromApi(searchTerm, callback) {
+function getDataFromApi(input, callback) {
   const query = {
     url: SEARCH_URL,
     data: {
-      q:`${searchTerm}`,
+      q:`${input}`,
       app_id: APP_ID,
       app_key: API_KEY,
       from: 0,
@@ -24,26 +24,46 @@ function getDataFromApi(searchTerm, callback) {
 function displayData(data) {
   data.hits.forEach(item =>{
   let html =  $(`<div class="row">
-      <div class="card-image col-12">
-        <img src="${item.recipe.image}" class="js-image">
-        <span class="card-title">${item.recipe.label}</span>
-      </div>
-      <div class="card-content col-3">
-
-        <p class="col-6">${item.recipe.ingredientLines}</p>
-        <p></p>
-      </div>
-      <div class="card-action col-3">
-        <a href="${item.recipe.url}">Try It</a>
-      </div>
-    </div>`);
+<div class="col s12 m7">
+  <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="${item.recipe.image}">
+    </div>
+    <div class="card-content">
+    <span class="card-title activator grey-text text-darken-4">${item.recipe.label}<i class="material-icons right">Nutrition Info</i></span>
+      <p>${item.recipe.ingredientLines}</p>
+    <p><a href="${item.recipe.url}">Try It!</a></p>
+    </div>
+    <div class="card-reveal">
+    <span class="card-title grey-text text-darken-4">${item.recipe.label}<i class="material-icons right">X</i></span>
+    <p><span id="cal-count">Calories:</span> ${Math.round(item.recipe.calories)}</p>
+    <p><span id="cal-count">Diet:</span> ${item.recipe.dietLabels}</p>
+    <p><span id="cal-count">Carbs: </span>
+    ${Math.round(item.recipe.totalNutrients.CHOCDF.quantity)}<span>
+    ${item.recipe.totalNutrients.CHOCDF.unit}
+    </span
+    </p>
+    </div>
+    </div>
+    </div>
+  </div>
+</div>`);
     $('#js-results').append(html);
     console.log(item.recipe.label);
     console.log(item.recipe.image);
     console.log(item.recipe.ingredientLines.join(","));
+    console.log(item.recipe.url);
+    console.log(item.recipe.calories);
   });
 }
 function eventHandler() {
-  $('')
+  $('#js-form').submit(function(event) {
+    event.preventDefault();
+    let input = $( "#js-textfield").val();
+    getDataFromApi(input);
+    console.log(input);
+  });
 }
-getDataFromApi('chicken', displayData);
+$(document).ready(eventHandler);
+
+// getDataFromApi('chicken', displayData);

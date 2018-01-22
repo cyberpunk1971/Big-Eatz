@@ -12,3 +12,8 @@ nav ul li {
   list-style: none;
   font-size: 25px;
 }
+
+#card-title, #cal-count {
+  font-weight: 900;
+  color: black;
+}
