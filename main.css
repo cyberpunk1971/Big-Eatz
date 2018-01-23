@@ -1,11 +1,12 @@
 fieldset, #js-label {
-  display: hidden;
+
   border-style: none;
 }
 
 header {
   text-align: center;
   font-size: 100px;
+  color: red;
 }
 
 nav ul li {
@@ -13,7 +14,17 @@ nav ul li {
   font-size: 25px;
 }
 
-#card-title, #cal-count {
-  font-weight: 900;
-  color: black;
+
+.pop-up {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+
+}
+
+.box, .js-input {
+
+  text-align: center;
 }
