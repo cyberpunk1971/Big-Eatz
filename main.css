@@ -12,6 +12,13 @@ header {
 nav ul li {
   list-style: none;
   font-size: 25px;
+
+
+}
+
+#navigation {
+  background-color: rgb(60, 179, 113, 0.5);
+
 }
 
 
@@ -30,4 +37,20 @@ img {
 
 .activator {
   max-width: 100%;
+}
+
+body {
+  background-image: url(images/food.jpg);
+  background-attachment: fixed;
+
+}
+
+.card:not(:hover) {
+  opacity: 0.3;
+  transition: opacity 1.0s ease-in;
+}
+
+.card:hover {
+  opacity: 1.0;
+  transition: opacity 1.0s ease-in;
 }

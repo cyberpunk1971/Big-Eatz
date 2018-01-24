@@ -4,7 +4,7 @@ const APP_ID = "b5c71b52";
 const state = {
   from: 0,
   to: 6
-}
+};
 function getDataFromApi(input, callback) {
   const query = {
     url: SEARCH_URL,
@@ -29,19 +29,34 @@ function getDataFromApi(input, callback) {
 function displayData(data) {
   $('#js-results').empty();
   data.hits.forEach(item => {
-    let html = $(`<div class="card">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="${item.recipe.image}">
-    </div>
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">${item.recipe.label}<i class="material-icons right">more_vert</i></span>
-      <p><a href="${item.recipe.url}">Try It!</a></p>
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+    let html = $(` <div class="container">
+
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class=" activator js-img" src="${item.recipe.image}">
+              <span class="card-title">${item.recipe.label}</span>
+            </div>
+            <div class="card-content">
+               <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+
+
+            </div>
+            <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4"><i class="small material-icons right">close</i></span>
+      <p>${item.recipe.dietLabels}</p>
       <p>${item.recipe.ingredientLines}</p>
+      <p>${Math.round(item.recipe.calories)} Calories</p>
+      <p>${Math.round(item.recipe.totalNutrients.CHOCDF.quantity)}<span>${item.recipe.totalNutrients.CHOCDF.unit} Carbs per serving</span></p>
     </div>
-  </div>`);
+            <div class="card-action">
+              <a href="${item.recipe.url}" target="_blank">Try It!</a>
+            </div>
+          </div>
+        </div>
+
+      </div>`);
+
 
     $('#js-results').append(html);
     console.log(item.recipe.label);
@@ -84,19 +99,14 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-
-// $(`<div class="row">
-// <div class="col s12 m6 l4">
+// <div class="container">
+// <div class="col s12 m7 l6">
 // <div class="card">
 //   <div class="card-image waves-effect waves-block waves-light">
 //     <img class="activator" src="${item.recipe.image}">
 //   </div>
 //   <div class="card-content">
-//   <span class="card-title activator grey-text text-darken-4 col s12 m6 l4">${item.recipe.label}<i class="material-icons right col s12 m6 l4">Nutrition Info</i></span>
+//   <span class="card-title activator grey-text text-darken-4 col s12 m7 l6">${item.recipe.label}<i class="material-icons right col s12 m7 l6">more_vert</i></span>
 //     <p>${item.recipe.ingredientLines}</p>
 //   <p><a href="${item.recipe.url}">Try It!</a></p>
 //   </div>
@@ -113,8 +123,12 @@ $(document).ready(function() {
 //   </div>
 //   </div>
 // </div>
-// </div>`);
+// </div>
 //
+
+
+
+
 
 
 
