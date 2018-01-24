@@ -12,12 +12,15 @@ header {
 nav ul li {
   list-style: none;
   font-size: 25px;
+  }
 
-
-}
+#contact {
+  margin-left: 2em; 
+  }
 
 #navigation {
-  background-color: rgb(60, 179, 113, 0.5);
+  background-color: rgba(60, 179, 113, 0);
+
 
 }
 
