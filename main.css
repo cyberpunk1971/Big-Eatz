@@ -15,7 +15,7 @@ nav ul li {
 }
 
 
-.pop-up {
+.pop-up, .hidden {
   display: none;
 }
 
@@ -24,7 +24,10 @@ img {
 
 }
 
-.box, .js-input {
-
+.card, .js-input {
   text-align: center;
+}
+
+.activator {
+  max-width: 100%;
 }

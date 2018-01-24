@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="grid.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
+    <!-- <link rel="stylesheet" href="grid.css"> -->
+    <link href=“https://fonts.googleapis.com/icon?family=Material+Icons” rel=“stylesheet”>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
 
     <title>Big Eatz</title>
@@ -13,7 +14,7 @@
   <header>Big Eatz<span id="ex-pt">!</span>
     <nav>
       <ul>
-        <li>About</li>
+        <li id="about-pop-up">About</li>
         <li>Contact</li>
       </ul>
     </nav>
@@ -33,6 +34,10 @@
     </div>
   <main role="main">
       <div id="js-results" class="row"></div>
+      <div class="js-buttons hidden">
+        <input type="button" name="prev" value="PREV" id="prev-btn">
+        <input type="button" name="next" value="NEXT" id="next-btn">
+      </div>
       <!-- <div class="row">
         <div class="col s12 m7">
 
