@@ -1,4 +1,4 @@
- #js-label, #js-form, #js-textfield {
+ #js-label, #js-form {
   border: none;
 }
 
@@ -90,9 +90,8 @@ body {
   text-shadow: none;
 }
 
-
-
 #js-textfield {
   color: white;
   font-weight: 900;
+  border-bottom: solid white 1px;
 }
