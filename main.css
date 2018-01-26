@@ -16,8 +16,10 @@ nav ul li {
   font-size: 25px;
 }
 
-#contact {
-  margin-left: 2em;
+#contact, #email {
+  margin-left: 2rem;
+  font-size: 25px !important;
+
 }
 
 #navigation {
@@ -60,7 +62,13 @@ body {
 }
 
 #js-results {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+#btns {
+  display: flex;
+  justify-content: space-around;
+
 }
 
 .js-buttons {
@@ -94,4 +102,26 @@ body {
   color: white;
   font-weight: 900;
   border-bottom: solid white 1px;
+  letter-spacing: 1px;
+}
+
+#prev-btn, #next-btn {
+  color: black;
+  font-size: 4rem;
+}
+
+h1 {
+  font-size: 8rem !important;
+}
+
+@-webkit-keyframes autofill {
+    to {
+        color: #666;
+        background: transparent;
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
 }
