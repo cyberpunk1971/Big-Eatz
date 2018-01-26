@@ -29,7 +29,7 @@ function getDataFromApi(input, callback) {
 function displayData(data) {
   $('#js-results').empty();
   data.hits.forEach(item => {
-    let html = $(` <div class="container">
+    let html = $(`<div class="container">
 
         <div class="col s12 m4">
           <div class="card">
@@ -44,10 +44,10 @@ function displayData(data) {
             </div>
             <div class="card-reveal">
       <span class="card-title grey-text text-darken-4"><i class="small material-icons right">close</i></span>
-      <p>${item.recipe.dietLabels}</p>
-      <p>${item.recipe.ingredientLines}</p>
-      <p>${Math.round(item.recipe.calories)} Calories</p>
-      <p>${Math.round(item.recipe.totalNutrients.CHOCDF.quantity)}<span>${item.recipe.totalNutrients.CHOCDF.unit} Carbs per serving</span></p>
+      <p class="card-txt">${item.recipe.dietLabels}</p>
+      <p class="card-txt">${item.recipe.ingredientLines}</p>
+      <p class="card-txt">${Math.round(item.recipe.calories)} Calories</p>
+      <p class="card-txt">${Math.round(item.recipe.totalNutrients.CHOCDF.quantity)}<span>${item.recipe.totalNutrients.CHOCDF.unit} Carbs per serving</span></p>
     </div>
             <div class="card-action">
               <a href="${item.recipe.url}" target="_blank">Try It!</a>
@@ -91,6 +91,7 @@ function eventHandler() {
 $(document).ready(eventHandler);
 
 $(document).ready(function() {
+  $('.js-buttons').hide();
   $('#js-textfield').focus(function() {
     $(this).val('');
   });

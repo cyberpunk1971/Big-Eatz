@@ -1,29 +1,30 @@
-fieldset, #js-label {
-
-  border-style: none;
+ #js-label, #js-form, #js-textfield {
+  border: none;
 }
 
 header {
+  font-family: 'Bangers', cursive;
+  font-size: 4rem;
   text-align: center;
   font-size: 100px;
   color: red;
+  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }
 
 nav ul li {
   list-style: none;
   font-size: 25px;
-  }
+}
 
 #contact {
-  margin-left: 2em; 
-  }
+  margin-left: 2em;
+}
 
 #navigation {
   background-color: rgba(60, 179, 113, 0);
-
-
+  border: none;
+  box-shadow: none !important;
 }
-
 
 .pop-up, .hidden {
   display: none;
@@ -31,7 +32,6 @@ nav ul li {
 
 img {
   max-width: 100%;
-
 }
 
 .card, .js-input {
@@ -43,17 +43,56 @@ img {
 }
 
 body {
-  background-image: url(images/food.jpg);
+  background-image: url(images/john-legrand-175771.jpg);
   background-attachment: fixed;
-
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .card:not(:hover) {
-  opacity: 0.3;
-  transition: opacity 1.0s ease-in;
+  opacity: 0.7;
+  transition: opacity 0.5s ease-in;
 }
 
 .card:hover {
   opacity: 1.0;
-  transition: opacity 1.0s ease-in;
+  transition: opacity 0.5s ease-in;
+}
+
+#js-results {
+  padding-bottom: 2rem;
+}
+
+.js-buttons {
+  display: none;
+}
+
+.hidden {
+  display: flex;
+  justify-content: center;
+}
+
+.card-txt {
+  font-family: 'Sedgwick Ave', cursive;
+}
+
+.collapsible-header {
+  text-align: center;
+  background: none !important;
+  border: none !important;
+  box-shadow: 0 !important;
+  -webkit-box-shadow: 0 !important;
+}
+
+#contact, #about-btn, .collapsible-body {
+  box-shadow: none !important;
+  border-bottom: none !important;
+  text-shadow: none;
+}
+
+
+
+#js-textfield {
+  color: white;
+  font-weight: 900;
 }
