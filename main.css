@@ -49,7 +49,21 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
+
+main {
+    flex: 1 0 auto;
+  }
+
+  footer {
+    color: white;
+    text-align: right;
+    font-weight: 200;
+    margin-top: 25px;
+  }
 
 .card:not(:hover) {
   opacity: 0.7;
@@ -73,6 +87,7 @@ body {
 
 .js-buttons {
   display: none;
+
 }
 
 .hidden {
@@ -80,8 +95,10 @@ body {
   justify-content: center;
 }
 
-.card-txt {
+.card-txt, .card-txt-lines {
+  display: flex;
   font-family: 'Sedgwick Ave', cursive;
+  align-items: left;
 }
 
 .collapsible-header {
@@ -107,7 +124,17 @@ body {
 
 #prev-btn, #next-btn {
   color: black;
-  font-size: 4rem;
+  background-color: light-grey !important;
+  font-size: 3rem;
+  border-radius: 25%;
+  border: 0 0 0 0 !important;
+  border-style: none;
+}
+
+
+.btn-1, .btn-2 {
+  height: 4.375rem !important;
+  background-color: red !important;
 }
 
 h1 {
