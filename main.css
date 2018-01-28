@@ -1,5 +1,10 @@
- #js-label, #js-form {
-  border: none;
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
+.submit {
+  background-color: red !important;
 }
 
 header {
@@ -11,37 +16,21 @@ header {
   text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }
 
+.collapsible-header {
+  text-align: center;
+  background: none !important;
+  border: none !important;
+  box-shadow: 0 !important;
+  -webkit-box-shadow: 0 !important;
+}
+
+h1 {
+  font-size: 8rem !important;
+}
+
 nav ul li {
   list-style: none;
   font-size: 25px;
-}
-
-#contact, #email {
-  margin-left: 2rem;
-  font-size: 25px !important;
-
-}
-
-#navigation {
-  background-color: rgba(60, 179, 113, 0);
-  border: none;
-  box-shadow: none !important;
-}
-
-.pop-up, .hidden {
-  display: none;
-}
-
-img {
-  max-width: 100%;
-}
-
-.card, .js-input {
-  text-align: center;
-}
-
-.activator {
-  max-width: 100%;
 }
 
 body {
@@ -58,15 +47,47 @@ main {
     flex: 1 0 auto;
   }
 
-  footer {
-    color: white;
-    text-align: right;
-    font-weight: 200;
-    margin-top: 25px;
+footer {
+  color: white;
+  text-align: right;
+  font-weight: 200;
+  margin-top: 25px;
   }
 
+#navigation {
+    background-color: rgba(60, 179, 113, 0);
+    border: none;
+    box-shadow: none !important;
+  }
+
+#contact, #email {
+  margin-left: 2rem;
+  font-size: 25px !important;
+}
+
+.pop-up, .hidden {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+#js-label, #js-form {
+ border: none;
+}
+
+.card, .js-input {
+  text-align: center;
+}
+
+.activator {
+  max-width: 100%;
+}
+
+
 .card:not(:hover) {
-  opacity: 0.7;
+  opacity: 0.8;
   transition: opacity 0.5s ease-in;
 }
 
@@ -101,14 +122,6 @@ main {
   align-items: left;
 }
 
-.collapsible-header {
-  text-align: center;
-  background: none !important;
-  border: none !important;
-  box-shadow: 0 !important;
-  -webkit-box-shadow: 0 !important;
-}
-
 #contact, #about-btn, .collapsible-body {
   box-shadow: none !important;
   border-bottom: none !important;
@@ -118,37 +131,25 @@ main {
 #js-textfield {
   color: white;
   font-weight: 900;
+  font-size: 1.75rem;
   border-bottom: solid white 1px;
   letter-spacing: 1px;
 }
 
 #prev-btn, #next-btn {
   color: black;
-  background-color: light-grey !important;
   font-size: 3rem;
-  border-radius: 25%;
+  border-radius: 15%;
   border: 0 0 0 0 !important;
   border-style: none;
-}
-
-
-.btn-1, .btn-2 {
-  height: 4.375rem !important;
   background-color: red !important;
+  width: 4rem;
 }
 
-h1 {
-  font-size: 8rem !important;
-}
 
 @-webkit-keyframes autofill {
     to {
         color: #666;
         background: transparent;
     }
-}
-
-input:-webkit-autofill {
-    -webkit-animation-name: autofill;
-    -webkit-animation-fill-mode: both;
 }
