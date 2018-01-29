@@ -29,7 +29,7 @@ function getDataFromApi(input, callback) {
 function displayData(data) {
   $('#js-results').empty();
   data.hits.forEach(item => {
-    let html = $(`<div class="container">
+    let html = $(`
 
         <div class="col s12 m4">
           <div class="card">
@@ -56,7 +56,7 @@ function displayData(data) {
           </div>
         </div>
 
-      </div>`);
+      `);
 
 
     $('#js-results').append(html);
