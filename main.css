@@ -122,6 +122,11 @@ img {
   align-items: left;
 }
 
+.card-title {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
 #contact, #about-btn, .collapsible-body {
   box-shadow: none !important;
   border-bottom: none !important;
