@@ -24,6 +24,14 @@ header {
   -webkit-box-shadow: 0 !important;
 }
 
+.about {
+  opacity: 1.0;
+  background-color: black;
+  line-height: 1.6;
+  font-weight: 200;
+
+}
+
 h1 {
   font-size: 8rem !important;
 }
@@ -49,7 +57,7 @@ main {
 
 footer {
   color: white;
-  text-align: right;
+  text-align: center;
   font-weight: 200;
   margin-top: 25px;
   }
@@ -60,9 +68,10 @@ footer {
     box-shadow: none !important;
   }
 
-#contact, #email {
-  margin-left: 2rem;
-  font-size: 25px !important;
+#email {
+
+  font-size: 1rem !important;
+  color: red;
 }
 
 .pop-up, .hidden {
